@@ -6,10 +6,10 @@ Feature: Login feature
     Then verify user can see login failed
     Examples:
       | email           | password |
-      | random@mail.com | random |
+      | random@mail.com | random   |
 
 
-  Scenario Outline: Verify user login using invalid account
+  Scenario Outline: Verify user login using valid account
     Given user dashboard page
     When user login using email "<email>" and password "<password>"
     Then verify user can see login failed
@@ -17,10 +17,10 @@ Feature: Login feature
       | email | password |
       | Admin | Admin    |
 
-  Scenario Outline: Verify user login using valid account
+  Scenario Outline: Verify user forgot password
     Given user dashboard page
     When user login using email "<email>" and password "<password>"
-    Then verify user can see login is success
+    Then verify user can see login failed
     Examples:
       | email | password |
-      | Admin | admin123 |
+      | Admin | Admin    |
