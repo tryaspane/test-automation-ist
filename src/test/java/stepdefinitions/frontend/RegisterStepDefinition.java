@@ -26,4 +26,14 @@ public class RegisterStepDefinition {
     public void navigateToMyAccountPage() {
         registerStep.navigateToMyAccountPage();
     }
+
+    @When("user register using existing email")
+    public void registerUsingExistingEmail() {
+        registerStep.registerUsingExistingEmail();
+    }
+
+    @Then("will show register is failed")
+    public void willShowRegisterIsFailed() {
+        registerStep.displayRegisterAccountFailed();
+    }
 }
