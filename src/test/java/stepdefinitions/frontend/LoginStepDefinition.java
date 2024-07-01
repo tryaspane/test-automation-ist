@@ -10,9 +10,9 @@ import steps.LoginStep;
 public class LoginStepDefinition {
     private LoginStep loginStep;
 
-    @Given("user login page")
-    public void loginPage() {
-        loginStep.loginPage();
+    @Given("user dashboard page")
+    public void accessDashboardPage() {
+        loginStep.accessDashboardPage();
     }
 
     @When("user login using email {string} and password {string}")
@@ -29,5 +29,11 @@ public class LoginStepDefinition {
     @Then("verify user can see login is success")
     public void verifyUserCanSeeLoginIsSuccess() {
         loginStep.verifyUserCanSeeLoginIsSuccess();
+    }
+
+
+    @When("user login using email or phone {string}")
+    public void userLoginUsingEmailOrPhone(String email_phone) {
+        loginStep.userLoginUsingEmailOrPhone(email_phone);
     }
 }
