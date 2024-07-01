@@ -12,6 +12,9 @@ public class LoginPage {
     @FindBy(name = "username")
     private WebElement inputUserNameField;
 
+    @FindBy(name = "//input[@id='user_login']")
+    private WebElement inputUserLogin;
+
     @FindBy(name = "password")
     private WebElement inputPasswordField;
 

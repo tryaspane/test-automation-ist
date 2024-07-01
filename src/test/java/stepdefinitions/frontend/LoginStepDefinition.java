@@ -20,7 +20,6 @@ public class LoginStepDefinition {
         loginStep.loginUsingEmailAndPassword(email, password);
     }
 
-
     @Then("verify user can see login failed")
     public void verifyUserCanSeeLoginFailed() {
         loginStep.verifyUserCanSeeLoginFailed();
@@ -29,11 +28,5 @@ public class LoginStepDefinition {
     @Then("verify user can see login is success")
     public void verifyUserCanSeeLoginIsSuccess() {
         loginStep.verifyUserCanSeeLoginIsSuccess();
-    }
-
-
-    @When("user login using email or phone {string}")
-    public void userLoginUsingEmailOrPhone(String email_phone) {
-        loginStep.userLoginUsingEmailOrPhone(email_phone);
     }
 }
