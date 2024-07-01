@@ -16,8 +16,8 @@ public class LoginStepDefinition {
     }
 
     @When("user login using email {string} and password {string}")
-    public void loginUsingInvalidEmailAndPassword(String email, String password) {
-        loginStep.loginUsingInvalidEmailAndPassword(email, password);
+    public void loginUsingEmailAndPassword(String email, String password) {
+        loginStep.loginUsingEmailAndPassword(email, password);
     }
 
 

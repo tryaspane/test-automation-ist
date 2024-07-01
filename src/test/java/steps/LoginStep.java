@@ -28,7 +28,7 @@ public class LoginStep {
         driver.get("https://blossomzones.com/wp-login.php");
     }
 
-    public void loginUsingInvalidEmailAndPassword(String email, String password) {
+    public void loginUsingEmailAndPassword(String email, String password) {
         driver.findElement(By.xpath("//input[@id='user_login']")).clear();
         driver.findElement(By.xpath("//input[@id='user_login']")).sendKeys(email);
         driver.findElement(By.xpath("//input[@id='user_pass']")).clear();
